@@ -39,15 +39,8 @@ const NavbarMowo1 = styled(NavbarMowo)(({ theme }) => ({
   margin: `0px`,
 }));
 
-const MowoLandingPage1 = styled(MowoLandingPage, {
-  shouldForwardProp: (prop) => !['data'].includes(prop.toString()),
-})(({ theme, data }) => ({
-  width:
-    data.currentVariant === 'Property1Mobile'
-      ? `375px`
-      : data.currentVariant === 'Property1Tablet'
-      ? `768px`
-      : `1440px`,
+const MowoLandingPage1 = styled(MowoLandingPage)(({ theme }) => ({
+  alignSelf: `stretch`,
   margin: `0px`,
 }));
 
@@ -70,7 +63,7 @@ function MainPage(props) {
   return (
     <Property1Desktop className={props.className}>
       <NavbarMowo1 />
-      <MowoLandingPage1 data={data} />
+      <MowoLandingPage1 />
       <Footer1 data={data} />
     </Property1Desktop>
   );
