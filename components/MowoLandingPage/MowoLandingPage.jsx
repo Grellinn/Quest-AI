@@ -60,17 +60,14 @@ const Page = styled('div')({
 const HeroD = styled('div', {
   shouldForwardProp: (prop) => !['data'].includes(prop.toString()),
 })(({ data }) => ({
-  backgroundImage: `url(assets/images/MOWOLandingPage_hero___d.png)`,
-  backgroundPosition: `center`,
-  backgroundSize: `cover`,
-  backgroundRepeat: `no-repeat`,
+  backgroundColor: `rgba(233, 234, 236, 1)`,
   display: `flex`,
   position: `relative`,
   isolation: `isolate`,
-  flexDirection: `column`,
+  flexDirection: `row`,
   justifyContent: `flex-start`,
   alignItems: `flex-start`,
-  padding: `220px 8px 54px 180px`,
+  padding: `180px 8px 54px 180px`,
   boxSizing: `border-box`,
   alignSelf: `stretch`,
   height: `769px`,
@@ -83,7 +80,7 @@ const HeroD = styled('div', {
   overflow: `hidden`,
 }));
 
-const HeroAll = styled('div')({
+const HeroLeft = styled('div')({
   display: `flex`,
   position: `relative`,
   isolation: `isolate`,
@@ -92,7 +89,8 @@ const HeroAll = styled('div')({
   alignItems: `flex-start`,
   padding: `0px`,
   boxSizing: `border-box`,
-  alignSelf: `stretch`,
+  width: `677px`,
+  height: `390px`,
   margin: `0px`,
 });
 
@@ -103,9 +101,10 @@ const HeroContent = styled('div')({
   flexDirection: `column`,
   justifyContent: `flex-start`,
   alignItems: `flex-start`,
-  padding: `0px`,
+  padding: `18px 0px`,
   boxSizing: `border-box`,
   flex: `1`,
+  height: `390px`,
   margin: `0px`,
 });
 
@@ -146,6 +145,23 @@ const ButtonOutlined = styled(Button)({
   margin: `25px 0px 0px 0px`,
 });
 
+const HeroRight = styled('div')({
+  backgroundImage: `url(assets/images/MOWOLandingPage_hero_right.png)`,
+  backgroundPosition: `center`,
+  backgroundSize: `cover`,
+  backgroundRepeat: `no-repeat`,
+  display: `flex`,
+  position: `relative`,
+  isolation: `isolate`,
+  flexDirection: `row`,
+  justifyContent: `flex-start`,
+  alignItems: `flex-start`,
+  width: `482px`,
+  height: `390px`,
+  margin: `0px 0px 0px 10px`,
+  overflow: `hidden`,
+});
+
 const Hero = styled('div', {
   shouldForwardProp: (prop) => !['data'].includes(prop.toString()),
 })(({ data }) => ({
@@ -171,7 +187,7 @@ const Hero = styled('div', {
   overflow: `hidden`,
 }));
 
-const HeroAll1 = styled('div')({
+const HeroAll = styled('div')({
   display: `flex`,
   position: `relative`,
   isolation: `isolate`,
@@ -314,6 +330,21 @@ const Benefits = styled('div', {
       : `0px`,
 }));
 
+const Headline = styled('div')({
+  display: `flex`,
+  position: `relative`,
+  isolation: `isolate`,
+  flexDirection: `row`,
+  justifyContent: `flex-start`,
+  alignItems: `flex-start`,
+  padding: `0px`,
+  boxSizing: `border-box`,
+  alignSelf: `stretch`,
+  height: `101px`,
+  margin: `0px`,
+  overflow: `hidden`,
+});
+
 const ExperienceTheMowoAdv = styled('div')({
   textAlign: `left`,
   whiteSpace: `pre-wrap`,
@@ -327,7 +358,24 @@ const ExperienceTheMowoAdv = styled('div')({
   textDecoration: `none`,
   lineHeight: `30px`,
   textTransform: `none`,
+  alignSelf: `stretch`,
+  flex: `1`,
   margin: `0px`,
+});
+
+const Text = styled('div')({
+  display: `flex`,
+  position: `relative`,
+  isolation: `isolate`,
+  flexDirection: `row`,
+  justifyContent: `flex-start`,
+  alignItems: `flex-start`,
+  padding: `0px`,
+  boxSizing: `border-box`,
+  alignSelf: `stretch`,
+  height: `63px`,
+  margin: `15px 0px 0px 0px`,
+  overflow: `hidden`,
 });
 
 const DiscoverTheTransform = styled('div')({
@@ -343,10 +391,12 @@ const DiscoverTheTransform = styled('div')({
   textDecoration: `none`,
   lineHeight: `30px`,
   textTransform: `none`,
-  margin: `40px 0px 0px 0px`,
+  alignSelf: `stretch`,
+  flex: `1`,
+  margin: `0px`,
 });
 
-const Frame171 = styled('div')({
+const Columns = styled('div')({
   display: `flex`,
   position: `relative`,
   isolation: `isolate`,
@@ -355,9 +405,8 @@ const Frame171 = styled('div')({
   alignItems: `flex-start`,
   padding: `0px`,
   boxSizing: `border-box`,
-  height: `250px`,
-  width: `1072px`,
-  margin: `40px 0px 0px 0px`,
+  alignSelf: `stretch`,
+  margin: `15px 0px 0px 0px`,
 });
 
 const DesignWithoutLimits = styled('div')({
@@ -369,6 +418,8 @@ const DesignWithoutLimits = styled('div')({
   alignItems: `flex-start`,
   padding: `0px`,
   boxSizing: `border-box`,
+  flex: `1`,
+  height: `250px`,
   margin: `0px`,
   overflow: `hidden`,
 });
@@ -386,7 +437,7 @@ const DesignToLiveHtml = styled('div')({
   textDecoration: `none`,
   lineHeight: `30px`,
   textTransform: `none`,
-  width: `320px`,
+  alignSelf: `stretch`,
   margin: `0px`,
 });
 
@@ -403,7 +454,8 @@ const ImportYourDifferen = styled('div')({
   textDecoration: `none`,
   lineHeight: `30px`,
   textTransform: `none`,
-  width: `320px`,
+  alignSelf: `stretch`,
+  height: `216px`,
   margin: `4px 0px 0px 0px`,
 });
 
@@ -416,6 +468,8 @@ const ExportToCode = styled('div')({
   alignItems: `flex-start`,
   padding: `0px`,
   boxSizing: `border-box`,
+  flex: `1`,
+  height: `250px`,
   margin: `0px 0px 0px 44px`,
   overflow: `hidden`,
 });
@@ -450,8 +504,8 @@ const ImportYourDifferen1 = styled('div')({
   textDecoration: `none`,
   lineHeight: `30px`,
   textTransform: `none`,
-  height: `191px`,
-  width: `344px`,
+  alignSelf: `stretch`,
+  height: `216px`,
   margin: `4px 0px 0px 0px`,
 });
 
@@ -464,7 +518,8 @@ const LaunchAndDone = styled('div')({
   alignItems: `flex-start`,
   padding: `0px`,
   boxSizing: `border-box`,
-  width: `320px`,
+  flex: `1`,
+  height: `250px`,
   margin: `0px 0px 0px 44px`,
   overflow: `hidden`,
 });
@@ -482,7 +537,7 @@ const DesignToLiveHtml2 = styled('div')({
   textDecoration: `none`,
   lineHeight: `30px`,
   textTransform: `none`,
-  width: `260px`,
+  alignSelf: `stretch`,
   margin: `0px`,
 });
 
@@ -499,7 +554,8 @@ const ImportYourDifferen2 = styled('div')({
   textDecoration: `none`,
   lineHeight: `30px`,
   textTransform: `none`,
-  width: `320px`,
+  alignSelf: `stretch`,
+  height: `216px`,
   margin: `4px 0px 0px 0px`,
 });
 
@@ -1557,7 +1613,7 @@ const ButtonOutlined2 = styled(Button)({
 const HeroD1 = styled('div', {
   shouldForwardProp: (prop) => !['data'].includes(prop.toString()),
 })(({ data }) => ({
-  backgroundImage: `url(assets/images/MOWOLandingPage_hero___d_1.png)`,
+  backgroundImage: `url(assets/images/MOWOLandingPage_hero___d.png)`,
   backgroundPosition: `center`,
   backgroundSize: `cover`,
   backgroundRepeat: `no-repeat`,
@@ -1579,7 +1635,7 @@ const HeroD1 = styled('div', {
   overflow: `hidden`,
 }));
 
-const HeroAll2 = styled('div')({
+const HeroAll1 = styled('div')({
   display: `flex`,
   position: `relative`,
   isolation: `isolate`,
@@ -1720,7 +1776,7 @@ const Hero1 = styled('div', {
   overflow: `hidden`,
 }));
 
-const HeroAll3 = styled('div')({
+const HeroAll2 = styled('div')({
   display: `flex`,
   position: `relative`,
   isolation: `isolate`,
@@ -3814,7 +3870,7 @@ const ButtonOutlined5 = styled(Button)({
 const HeroD2 = styled('div', {
   shouldForwardProp: (prop) => !['data'].includes(prop.toString()),
 })(({ data }) => ({
-  backgroundImage: `url(assets/images/MOWOLandingPage_hero___d_2.png)`,
+  backgroundImage: `url(assets/images/MOWOLandingPage_hero___d_1.png)`,
   backgroundPosition: `center`,
   backgroundSize: `cover`,
   backgroundRepeat: `no-repeat`,
@@ -3836,7 +3892,7 @@ const HeroD2 = styled('div', {
   overflow: `hidden`,
 }));
 
-const HeroAll4 = styled('div')({
+const HeroAll3 = styled('div')({
   display: `flex`,
   position: `relative`,
   isolation: `isolate`,
@@ -3977,7 +4033,7 @@ const Hero2 = styled('div', {
   overflow: `hidden`,
 }));
 
-const HeroAll5 = styled('div')({
+const HeroAll4 = styled('div')({
   display: `flex`,
   position: `relative`,
   isolation: `isolate`,
@@ -6070,7 +6126,7 @@ function MowoLandingPage(props) {
         {!(data.currentVariant === 'Property1HTMLT') &&
           !(data.currentVariant === 'Property1HTMLM') && (
             <HeroD data={data}>
-              <HeroAll>
+              <HeroLeft>
                 <HeroContent>
                   <HeroTxt>
                     {`Empowering the 
@@ -6088,12 +6144,13 @@ Modern Workplace`}
                     Schedule a Consultation{' '}
                   </ButtonOutlined>
                 </HeroContent>
-              </HeroAll>
+              </HeroLeft>
+              <HeroRight></HeroRight>
             </HeroD>
           )}
         {false && (
           <Hero data={data}>
-            <HeroAll1>
+            <HeroAll>
               <ActionsIcon
                 src={`assets/images/MOWOLandingPage_Actions_Icon.png`}
                 loading="lazy"
@@ -6120,19 +6177,23 @@ into a `}</HeroTxt1Span1>
                   Build for Free{' '}
                 </ButtonOutlined1>
               </HeroContent1>
-            </HeroAll1>
+            </HeroAll>
           </Hero>
         )}
         {!(data.currentVariant === 'Property1HTMLT') &&
           !(data.currentVariant === 'Property1HTMLM') && (
             <Benefits data={data}>
-              <ExperienceTheMowoAdv>
-                {`Experience the MOWO Advantage`}
-              </ExperienceTheMowoAdv>
-              <DiscoverTheTransform>
-                {`Discover the transformative benefits of MOWO's solutions, designed to help businesses unlock their full potential.`}
-              </DiscoverTheTransform>
-              <Frame171>
+              <Headline>
+                <ExperienceTheMowoAdv>
+                  {`Experience the MOWO Advantage`}
+                </ExperienceTheMowoAdv>
+              </Headline>
+              <Text>
+                <DiscoverTheTransform>
+                  {`Discover the transformative benefits of MOWO's solutions, designed to help businesses unlock their full potential.`}
+                </DiscoverTheTransform>
+              </Text>
+              <Columns>
                 <DesignWithoutLimits>
                   <DesignToLiveHtml>
                     {`Increased Productivity`}
@@ -6155,7 +6216,7 @@ into a `}</HeroTxt1Span1>
                     {`Empower your workforce with the flexibility to work from anywhere, using devices that are lightweight, portable, and designed for on-the-go productivity.`}
                   </ImportYourDifferen2>
                 </LaunchAndDone>
-              </Frame171>
+              </Columns>
             </Benefits>
           )}
         {!(data.currentVariant === 'Property1HTMLT') &&
@@ -6318,7 +6379,7 @@ into a `}</HeroTxt1Span1>
           )}
         {false && (
           <HeroD1 data={data}>
-            <HeroAll2>
+            <HeroAll1>
               <ActionsIcon1
                 src={`assets/images/MOWOLandingPage_Actions_Icon_1.png`}
                 loading="lazy"
@@ -6345,12 +6406,12 @@ into a `}</HeroTxt2Span1>
                   Build for Free{' '}
                 </ButtonOutlined3>
               </HeroContent2>
-            </HeroAll2>
+            </HeroAll1>
           </HeroD1>
         )}
         {data.currentVariant === 'Property1HTMLT' && (
           <Hero1 data={data}>
-            <HeroAll3>
+            <HeroAll2>
               <ActionsIcon2
                 src={`assets/images/MOWOLandingPage_Actions_Icon_2.png`}
                 loading="lazy"
@@ -6377,7 +6438,7 @@ into a `}</HeroTxt3Span1>
                   Build for Free{' '}
                 </ButtonOutlined4>
               </HeroContent3>
-            </HeroAll3>
+            </HeroAll2>
           </Hero1>
         )}
         {data.currentVariant === 'Property1HTMLT' && (
@@ -6660,7 +6721,7 @@ into a `}</HeroTxt3Span1>
         )}
         {false && (
           <HeroD2 data={data}>
-            <HeroAll4>
+            <HeroAll3>
               <ActionsIcon4
                 src={`assets/images/MOWOLandingPage_Actions_Icon_4.png`}
                 loading="lazy"
@@ -6687,12 +6748,12 @@ into a `}</HeroTxt4Span1>
                   Build for Free{' '}
                 </ButtonOutlined6>
               </HeroContent4>
-            </HeroAll4>
+            </HeroAll3>
           </HeroD2>
         )}
         {data.currentVariant === 'Property1HTMLM' && (
           <Hero2 data={data}>
-            <HeroAll5>
+            <HeroAll4>
               <ActionsIcon5
                 src={`assets/images/MOWOLandingPage_Actions_Icon_5.png`}
                 loading="lazy"
@@ -6719,7 +6780,7 @@ into a `}</HeroTxt5Span1>
                   Build for Free{' '}
                 </ButtonOutlined7>
               </HeroContent5>
-            </HeroAll5>
+            </HeroAll4>
           </Hero2>
         )}
         {data.currentVariant === 'Property1HTMLM' && (
